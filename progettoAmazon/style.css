@@ -1,7 +1,6 @@
 body {
   text-align: center;
   margin: auto;
-  background-color: rgb(223, 231, 237);
 }
 
 header {
@@ -31,12 +30,9 @@ header {
   margin: auto;
   width: 2000px;
 }
-#cards {
-  width: 2000px;
-  height: 300px;
-  background-color: rgb(255, 255, 255);
-  padding: 20px;
-  margin: 20px;
+.card {
+  width: 200px; /* Larghezza desiderata */
+  height: 150px;
 }
 footer {
   background-color: #0f1111;
