@@ -31,8 +31,9 @@ header {
   width: 2000px;
 }
 .card {
-  width: 200px; /* Larghezza desiderata */
+  width: 200px;
   height: 150px;
+  display: grid; /* Utilizza il layout a griglia */
 }
 footer {
   background-color: #0f1111;
