@@ -15,21 +15,23 @@ for (let i = 0; i < pets.length; i++) {
   console.log(pets[i]);
 }
 console.log(pets);
-pets.push("parrots");// l'ho aggiunto per giocare un pochetto e usare un'altra lettera dell'alfabeto.
+pets.push("parrots"); // l'ho aggiunto per giocare un pochetto e usare un'altra lettera dell'alfabeto.
+
 /* ESERCIZIO 2
     Scrivi del codice per ordinare alfabeticamente gli elementi dell'array "pets".
 */
-
 pets.sort();
 
-console.log(pets);
-delete.pets(3)
+console.log("ordine alfabetico dei pets", pets);
 
+const index = 3;
+pets.splice(index, 1);
+
+console.log("ho tolto Parrots", pets);
 /* ESERCIZIO 3
     Scrivi del codice per stampare nuovamente in console gli elementi dell'array "pets", questa volta in ordine invertito.
 */
-pets.reverse()
-console.log (pets)
+
 /* ESERCIZIO 4
     Scrivi del codice per spostare il primo elemento dall'array "pets" in ultima posizione.
 */
