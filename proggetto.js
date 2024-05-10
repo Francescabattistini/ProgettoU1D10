@@ -126,6 +126,11 @@ const numericArray = [
   6, 90, 45, 75, 84, 98, 35, 74, 31, 2, 8, 23, 100, 32, 66, 313, 321, 105,
 ];
 
+let Indice = 0; // Inizializziamo un contatore
+while (Indice < numericArray.length && numericArray[Indice] <= 32) {
+  console.log(numericArray[Indice]);
+  Indice++;
+}
 /* ESERCIZIO 10
     Partendo dall'array fornito e utilizzando un costrutto switch, genera un nuovo array composto dalle posizioni di ogni carattere all'interno
     dell'alfabeto italiano.
@@ -141,18 +146,28 @@ for (let i = 0; i < charactersArray.length; i++) {
   const character = charactersArray[i];
 
   switch (character) {
-    case "a":
+    case "g":
       positionsArray.push(alphabet.indexOf(character) + 1);
       break;
-    case "b":
+
+    case "n":
       positionsArray.push(alphabet.indexOf(character) + 1);
       break;
-    case "c":
+
+    case "u":
       positionsArray.push(alphabet.indexOf(character) + 1);
       break;
-    // continua con tutti gli altri caratteri dell'alfabeto
+
+    case "z":
+      positionsArray.push(alphabet.indexOf(character) + 1);
+      break;
+
+    case "d":
+      positionsArray.push(alphabet.indexOf(character) + 1);
+      break;
+
     default:
-      positionsArray.push(-1); // carattere non trovato
+      positionsArray.push(-1); // se non c'è il carattere
       break;
   }
 }
