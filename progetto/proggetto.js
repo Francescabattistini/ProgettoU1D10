@@ -73,24 +73,51 @@ for (let i = 0; i < cars.length; i++) {
 
 console.log("Qui ho aggiunto le targhe alle cars:", cars);
 
-/* const licensePlate = "ab1234bc";
-cars.push(licensePlate);
-console.log(cars); */
-
 /* ESERCIZIO 6
     Scrivi del codice per aggiungere un nuovo oggetto in ultima posizione nell'array "cars", rispettando la struttura degli altri elementi.
     Successivamente, rimuovi l'ultimo elemento della proprietà "trims" da ogni auto.
 */
+const newCar = {
+  brand: "Fiat",
+  model: "multipla",
+  color: "bluenavy",
+  trims: ["family", "brutta", "seiPosti"],
+  licensePlate: "CD123EF",
+};
+
+cars.push(newCar);
+console.log("ho aggiunto un nuovo modello di cars", cars);
+/* rimuovere i trims: */
+/* for (let i = 0; i < cars.length; i++) {
+  delete cars[i].trims;
+}
+console.log("senza trims:",cars); */
 
 /* ESERCIZIO 7
     Scrivi del codice per salvare il primo elemento della proprietà "trims" di ogni auto nel nuovo array "justTrims", sotto definito.
 */
 const justTrims = [];
 
+cars.forEach(function (car) {
+  justTrims.push(car.trims[0]);
+});
+
+console.log("solo i primi elementi di ", justTrims);
+
 /* ESERCIZIO 8
     Cicla l'array "cars" e costruisci un if/else statament per mostrare due diversi messaggi in console. Se la prima lettera della proprietà
     "color" ha valore "b", mostra in console "Fizz". Altrimenti, mostra in console "Buzz".
 */
+let i = 0;
+while (i < cars.length) {
+  const firstLetter = cars[i].color.charAt(0).toLowerCase();
+  if (firstLetter === "b") {
+    console.log("Fizz", cars[i].color);
+  } else {
+    console.log("Buzz", cars[i].color);
+  }
+  i++;
+}
 
 /* ESERCIZIO 9
     Utilizza un ciclo while per stampare in console i valori del seguente array numerico fino al raggiungimento del numero 32.
@@ -105,3 +132,29 @@ const numericArray = [
     es. [f, b, e] --> [6, 2, 5]
 */
 const charactersArray = ["g", "n", "u", "z", "d"];
+
+const alphabet = "abcdefghijklmnopqrstuvwxyz";
+
+const positionsArray = [];
+
+for (let i = 0; i < charactersArray.length; i++) {
+  const character = charactersArray[i];
+
+  switch (character) {
+    case "a":
+      positionsArray.push(alphabet.indexOf(character) + 1);
+      break;
+    case "b":
+      positionsArray.push(alphabet.indexOf(character) + 1);
+      break;
+    case "c":
+      positionsArray.push(alphabet.indexOf(character) + 1);
+      break;
+    // continua con tutti gli altri caratteri dell'alfabeto
+    default:
+      positionsArray.push(-1); // carattere non trovato
+      break;
+  }
+}
+
+console.log(positionsArray);
